@@ -1,0 +1,35 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar color="accent">
+      <span>Menú</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+
+      <span class="spacer"></span>
+
+      <button mat-button>Logout</button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a
+        *ngFor="let item of getMenu()"
+        [routerLink]="item.enlace"
+        mat-list-item
+        (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>{{ item.icono }}</mat-icon>
+        <span>{{ item.literal }}</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="mg-10">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
