@@ -8,8 +8,8 @@ import { ListadoComponent } from './pages/listado/listado.component';
 const routes: Routes = [
 { path: '', component: HomeComponent,
 children: [
-  { path: 'galerias' , component: HomeComponent},
-  { path: 'listar/:gal', component: ListadoComponent },
+  { path: 'home' , component: HomeComponent},
+  { path: 'galeria/:id', component: ListadoComponent },
   { path: 'buscar', component: BuscarComponent },
   { path: '**', component: ErrorPageComponent}
 ]}

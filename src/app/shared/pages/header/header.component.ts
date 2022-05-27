@@ -11,7 +11,8 @@ interface enlaceMenu {
   selector: 'app-header',
   templateUrl: './header.component.html',
   styles: [`
-  { .mg-10: margin 10px; }
+   .mg-10 { margin: 10px;}
+  .fs-18 { font-size:18px;}
   `]
 })
 export class HeaderComponent implements OnInit {
@@ -33,14 +34,8 @@ export class HeaderComponent implements OnInit {
       {
         usuario: 'all',
         literal: 'Find',
-        enlace: './buscar',
+        enlace: './galerias/buscar',
         icono: 'search'
-      },
-      {
-        usuario: 'all',
-        literal: 'Galeries',
-        enlace: './galerias',
-        icono: 'view_comfy'
       },
       {
         usuario: 'all',

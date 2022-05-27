@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
     ErrorPageComponent,
     InputBuscarComponent,
     VntmodalComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

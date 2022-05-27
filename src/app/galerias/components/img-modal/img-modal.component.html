@@ -1,0 +1,23 @@
+<div #myModal class="modal" (click)="cerrarModal()">
+  <span class="close">&times;</span>
+  <img
+    class="modal-content"
+    id="img01"
+    [src]="imagen.imagen"
+    [alt]="imagen.nombre"
+  />
+  <div class="caption">
+    <div><b>Nombre:</b> {{ imagen.nombre }}</div>
+    <div>
+      {{
+        imagen.descripcion.length > 150
+          ? (imagen.descripcion | slice: 0:150) + "..."
+          : imagen.descripcion
+      }}
+    </div>
+
+    <div *ngIf="imagen.megustan > 0" class="megustan">
+      Le ha gustado a <b> {{ imagen.megustan }} </b> personas
+    </div>
+  </div>
+</div>

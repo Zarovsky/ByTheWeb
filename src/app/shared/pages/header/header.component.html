@@ -4,12 +4,10 @@
       <span>Menú</span>
       <span class="spacer"></span>
       <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon>close</mat-icon>
+        <mat-icon class="fs-18">close</mat-icon>
       </button>
 
       <span class="spacer"></span>
-
-      <button mat-button>Logout</button>
     </mat-toolbar>
 
     <mat-nav-list>
@@ -17,7 +15,8 @@
         *ngFor="let item of getMenu()"
         [routerLink]="item.enlace"
         mat-list-item
-        (click)="sidenav.toggle()">
+        (click)="sidenav.toggle()"
+      >
         <mat-icon mat-list-icon>{{ item.icono }}</mat-icon>
         <span>{{ item.literal }}</span>
       </a>
@@ -27,6 +26,8 @@
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
+    <span class="spacer"></span>
+    <button mat-button>Logout</button>
   </mat-toolbar>
 
   <div class="mg-10">

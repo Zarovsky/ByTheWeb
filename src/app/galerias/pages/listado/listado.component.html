@@ -1,1 +1,21 @@
-<p>listado works!</p>
+<h1>Gallery {{ galeriaActual}}</h1>
+
+<mat-divider></mat-divider>
+<br />
+<div
+  fxLayout="row wrap"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px">
+  <div fxFlex="20" fxFlex.sm="50" *ngFor="let item of imagenes">
+    <app-tarjeta [imagen]="item"></app-tarjeta>
+
+  </div>
+</div>
+
+<!-- si se pulso el botón debe pasar esto a ser verdadero y que se muestre -->
+<div *ngIf="abrirModal == true">
+  <app-img-modal [imagen]="imgDetalle"
+  (onVerDetalle)="verDetalle( $event )"
+  ></app-img-modal>
+</div>

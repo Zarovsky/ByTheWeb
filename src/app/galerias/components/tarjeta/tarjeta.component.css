@@ -1,0 +1,13 @@
+mat-card {
+  margin-top: 20px;
+}
+
+@font-face {
+  font-family: 'mojito';
+  src: url('src/assets/fonts/mojito_in_june-webfont.woff2') format('woff2'),
+       url('src/assets/fonts/mojito_in_june-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
