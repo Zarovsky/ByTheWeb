@@ -1,9 +1,7 @@
 .container {
-  width: 90%;
   max-width: 1800px;
   margin: 10px auto;
   text-align: center;
-  background-color: rgb(236, 157, 157);
 }
 
 figure.snip0015 {
@@ -21,6 +19,8 @@ figure.snip0015 * {
   box-sizing: border-box;
 }
 figure.snip0015 img {
+  max-width: 100%;
+  height: auto;
   opacity: 1;
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
@@ -64,12 +64,15 @@ figure.snip0015 p {
 }
 figure.snip0015 h2 {
   word-spacing: -0.15em;
+  letter-spacing: 0.30em;
   font-weight: 250;
+  font-size: 2em;
   text-transform: uppercase;
 }
 
 figure.snip0015 p {
   font-weight: 200;
+  font-size: 1.2em;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }

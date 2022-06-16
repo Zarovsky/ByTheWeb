@@ -7,7 +7,7 @@
   <figure *ngFor="let menu of menuGalerias" class="snip0015">
     <img [src]="menu.imagen_galeria | galeria" alt="{{ menu.titulo_galeria }}" />
     <figcaption>
-      <h2 [innerHtml]="menu.titulo_galeria"></h2>
+      <h2>{{menu.titulo_galeria}}</h2>
       <p>{{ menu.desc_galeria }}</p>
       <a [routerLink]="['/galeria', menu.directorio_galeria]"></a>
     </figcaption>
