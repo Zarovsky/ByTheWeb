@@ -1,0 +1,17 @@
+h1 {
+  font-family: Roboto;
+  letter-spacing: 1.8em;
+  margin-inline-start: 20px;
+}
+
+.formulario {
+padding: 10px;
+  margin: auto;
+}
+
+.contact-card {
+  padding:10px;
+  max-width: 400px;
+}
+
+

@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ContactoRoutingModule } from './contacto-routing.module';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
   ],
   imports: [
     CommonModule,
-    ContactoRoutingModule
+    MaterialModule,
+    FlexLayoutModule,
+    ReactiveFormsModule
   ]
 })
 export class ContactoModule { }

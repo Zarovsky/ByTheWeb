@@ -1,3 +1,10 @@
+
+h1 {
+  font-family: Roboto;
+  letter-spacing: 1.8em;
+  margin-inline-start: 20px;
+}
+
 .container {
   max-width: 1800px;
   margin: 10px auto;
@@ -110,4 +117,19 @@ figure.snip0015:hover figcaption::before {
   opacity: 1;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+}
+/* si es pantalla canija mostramos el título */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  figure.snip0015 h2
+{
+    opacity: 1;
+  }
+
+  h1 {
+    font-family: Roboto;
+    letter-spacing: 1em;
+  }
+
 }

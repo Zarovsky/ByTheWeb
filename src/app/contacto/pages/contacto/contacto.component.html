@@ -1,1 +1,64 @@
-<p>contacto works!</p>
+<h1>Contact</h1>
+<mat-divider></mat-divider>
+
+<div class="contact-card">
+  <mat-card >
+    <mat-card-title>David Lázaro</mat-card-title>
+    <mat-card-subtitle>Madrid - Spain</mat-card-subtitle>
+    <mat-card-content>
+      <p>zaroweb@fotografia.com</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<br />
+
+<h1>Contact Form</h1>
+<mat-divider></mat-divider>
+<p>If you want to make any comments or suggestions, please fill out the form</p>
+
+<div class="formulario">
+  <form autocomplete="off" [formGroup]="contactoForm" (ngSubmit)="onSubmit()">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="40px">
+      <div fxFlex="50" fxLayout="column">
+        <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+          <mat-label>Enter your name</mat-label>
+          <input
+            matInput
+            placeholder="Mike"
+            type="text"
+            formControlName="name"
+          />
+          <mat-error *ngIf="getCampoNoValido('name')">{{
+            getErrorCampoNoValido('name')
+          }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input
+            matInput
+            placeholder="mike@example.com"
+            type="email"
+            formControlName="email"
+          />
+          <mat-error *ngIf="getCampoNoValido('email')">{{
+            getErrorCampoNoValido('email')
+          }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+          <mat-label>Content</mat-label>
+          <textarea matInput required formControlName="message" rows="10"></textarea>
+        </mat-form-field>
+
+        <br />
+        <div fxLayout>
+          <button mat-raised-button [disabled]="contactoForm.invalid" color="warn" type="submit">
+            <mat-icon>send</mat-icon>
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

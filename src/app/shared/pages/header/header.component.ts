@@ -13,6 +13,7 @@ interface enlaceMenu {
   styles: [`
    .mg-10 { margin: 10px;}
   .fs-18 { font-size:18px;}
+  /* mat-sidenav { width: 200px; } */
   `]
 })
 export class HeaderComponent implements OnInit {
@@ -34,7 +35,7 @@ export class HeaderComponent implements OnInit {
       {
         usuario: 'all',
         literal: 'Find',
-        enlace: './galerias/buscar',
+        enlace: './buscar',
         icono: 'search'
       },
       {
@@ -51,7 +52,7 @@ export class HeaderComponent implements OnInit {
       },
       {
         usuario: 'admin',
-        literal: 'Galerie +',
+        literal: 'Galeria +',
         enlace: './galerias',
         icono: 'fireplace'
       },
