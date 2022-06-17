@@ -21,7 +21,6 @@ import { ContactoModule } from './contacto/contacto.module';
     SharedModule,
     ContactoModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

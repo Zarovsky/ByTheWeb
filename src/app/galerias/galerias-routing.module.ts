@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ErrorPageComponent } from '../shared/pages/error-page/error-page.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
+import { GaleriasComponent } from './pages/galerias/galerias.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent,
 children: [
-  { path: 'home' , component: HomeComponent},
-  { path: 'galeria/:id', component: ListadoComponent },
-  { path: 'buscar', component: BuscarComponent },
-  { path: '**', component: ErrorPageComponent}
+  { path: 'home' , component: GaleriasComponent},
+  { path: ':id', component: ListadoComponent },
+  { path: 'search', component: BuscarComponent },
+  { path: '**', redirectTo:'home'}
 ]}
 ];
 

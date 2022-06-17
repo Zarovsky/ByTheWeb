@@ -2,17 +2,23 @@
 
 <mat-divider></mat-divider>
 <br />
+<!--
 <div
   fxLayout="row wrap"
   fxLayout.xs="column"
   fxLayoutAlign="center"
-  fxLayoutGap="10px">
+  fxLayoutGap="10px" *ngIf="imagenes; else Sindatos">
   <div fxFlex="20" fxFlex.sm="50" *ngFor="let item of imagenes">
     <app-tarjeta [imagen]="item"></app-tarjeta>
 
   </div>
 </div>
 
+<ng-template #Sindatos>
+  <div>No hay nada que mostrar</div>
+</ng-template>
+-->
+hola
 <!-- si se pulso el botón debe pasar esto a ser verdadero y que se muestre -->
 <div *ngIf="abrirModal == true">
   <app-img-modal [imagen]="imgDetalle"

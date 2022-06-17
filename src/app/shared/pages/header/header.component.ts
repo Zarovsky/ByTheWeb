@@ -29,37 +29,37 @@ export class HeaderComponent implements OnInit {
       {
         usuario: 'all',
         literal: 'Home',
-        enlace: './home',
+        enlace: '/galerias/home',
         icono: 'home'
       },
       {
         usuario: 'all',
-        literal: 'Find',
-        enlace: './home/buscar',
+        literal: 'Search',
+        enlace: '/galerias/search',
         icono: 'search'
       },
       {
         usuario: 'all',
         literal: 'Info',
-        enlace: './info',
+        enlace: '/info',
         icono: 'info'
       },
       {
         usuario: 'all',
         literal: 'Contact',
-        enlace: './contacto',
+        enlace: '/contacto',
         icono: 'mail'
       },
       {
         usuario: 'admin',
         literal: 'Galeria +',
-        enlace: './galerias',
+        enlace: '/galerias',
         icono: 'fireplace'
       },
       {
         usuario: 'admin',
         literal: 'CRUD',
-        enlace: './galerias',
+        enlace: '/galerias',
         icono: 'edit_note'
       }
     ];

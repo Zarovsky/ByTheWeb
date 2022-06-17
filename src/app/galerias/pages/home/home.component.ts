@@ -1,18 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { menusGaleria } from 'src/app/interfaces/galeria-mock';
-import { galeria } from '../../../interfaces/galerias-inerfaces';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  templateUrl: './home.component.html'
 })
-export class HomeComponent implements OnInit {
-
-  menuGalerias:galeria[] = menusGaleria; // es el mock con los datos ya escritos
+export class HomeComponent{
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

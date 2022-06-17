@@ -12,7 +12,8 @@ import { ImagenPipe } from './pipes/imagen.pipe';
 import { ImgModalComponent } from './components/img-modal/img-modal.component';
 import { GaleriaPipe } from './pipes/galeria.pipe';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { GaleriasComponent } from './pages/galerias/galerias.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     TarjetaComponent,
     ImagenPipe,
     ImgModalComponent,
-    GaleriaPipe
+    GaleriaPipe,
+    GaleriasComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     RouterModule,
     MaterialModule,
     FlexLayoutModule,
-
+    SharedModule
   ]
 })
 export class GaleriasModule { }

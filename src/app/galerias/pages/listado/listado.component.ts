@@ -18,7 +18,7 @@ export class ListadoComponent implements OnInit {
   constructor(private route: ActivatedRoute,private vtnModal: ModalService) {
     //this.route.params.subscribe(({ gallery }) => { this.getproducts(gallery); });
     // otra forma de hacerlo
-     const gallery = this.route.snapshot.paramMap.get('id')!;
+     this.galeriaActual = this.route.snapshot.paramMap.get('id')!;
   }
 
   ngOnInit(): void {
