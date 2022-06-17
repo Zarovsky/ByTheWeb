@@ -14,4 +14,13 @@ padding: 10px;
   max-width: 400px;
 }
 
+/* si es pantalla canija mostramos el título */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
 
+  h1 {
+    letter-spacing: 1em;
+  }
+
+}

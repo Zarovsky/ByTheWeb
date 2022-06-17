@@ -29,7 +29,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     GaleriasRoutingModule,
     RouterModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+
   ]
 })
 export class GaleriasModule { }
