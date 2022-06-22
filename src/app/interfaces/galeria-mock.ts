@@ -5,7 +5,7 @@ export const menusGaleria: galeria[] = [
     titulo_galeria: 'Nature',
     directorio_galeria: 'nature',
     imagen_galeria: 'naturaleza.jpg',
-    desc_galeria: 'Landscapes, flowers...'
+    desc_galeria: 'Landscapes, trees...'
   },
   {
     titulo_galeria: 'Animals',
@@ -36,6 +36,24 @@ export const menusGaleria: galeria[] = [
     directorio_galeria: 'cajon',
     desc_galeria:'Miscellaneous',
     imagen_galeria: 'cajon.jpg'
+  },
+  {
+    titulo_galeria: 'Keys',
+    directorio_galeria: 'keys',
+    desc_galeria:'Only images of keys',
+    imagen_galeria: 'key.jpg'
+  },
+  {
+    titulo_galeria: 'Flowers',
+    directorio_galeria: 'flowers',
+    desc_galeria:'They are so pretty',
+    imagen_galeria: 'flower.jpg'
+  },
+  {
+    titulo_galeria: 'Black & white',
+    directorio_galeria: 'blackwhite',
+    desc_galeria:'They are so pretty',
+    imagen_galeria: 'bandw.jpg'
   },
 ];
 
