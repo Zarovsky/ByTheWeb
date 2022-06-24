@@ -14,6 +14,7 @@ import { GaleriaPipe } from './pipes/galeria.pipe';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { GaleriasComponent } from './pages/galerias/galerias.component';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule,
     MaterialModule,
     FlexLayoutModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class GaleriasModule { }

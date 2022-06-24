@@ -5,6 +5,10 @@ h1 {
   margin-inline-start: 20px;
 }
 
+.btncentro {
+  text-align: center;
+}
+
 .container {
   max-width: 1800px;
   margin: 10px auto;

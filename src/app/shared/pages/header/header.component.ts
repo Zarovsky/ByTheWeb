@@ -10,11 +10,7 @@ interface enlaceMenu {
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styles: [`
-   .mg-10 { margin: 10px;}
-  .fs-18 { font-size:18px;}
-  /* mat-sidenav { width: 200px; } */
-  `]
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
 

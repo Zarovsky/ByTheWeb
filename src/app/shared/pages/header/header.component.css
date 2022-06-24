@@ -1,0 +1,13 @@
+.mg-10 {
+  margin: 10px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.toolbar-fixed {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  opacity: 0.8;
+}
+/* mat-sidenav { width: 200px; } */

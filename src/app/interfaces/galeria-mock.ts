@@ -41,19 +41,37 @@ export const menusGaleria: galeria[] = [
     titulo_galeria: 'Keys',
     directorio_galeria: 'keys',
     desc_galeria:'Only images of keys',
-    imagen_galeria: 'key.jpg'
+    imagen_galeria: 'keys.jpg'
   },
   {
     titulo_galeria: 'Flowers',
     directorio_galeria: 'flowers',
     desc_galeria:'They are so pretty',
-    imagen_galeria: 'flower.jpg'
+    imagen_galeria: 'flowers.jpg'
   },
   {
     titulo_galeria: 'Black & white',
-    directorio_galeria: 'blackwhite',
-    desc_galeria:'They are so pretty',
+    directorio_galeria: 'bandw',
+    desc_galeria:'Light and darkness',
     imagen_galeria: 'bandw.jpg'
+  },
+  {
+    titulo_galeria: 'Tobacco',
+    directorio_galeria: 'tobaco',
+    desc_galeria:'Old tobacco packages in Spain',
+    imagen_galeria: 'tobacco.jpg'
+  },
+  {
+    titulo_galeria: 'Minimalist',
+    directorio_galeria: 'minimalist',
+    desc_galeria:'Simple and not so simple',
+    imagen_galeria: 'minimalist.jpg'
+  },
+  {
+    titulo_galeria: 'Abstract',
+    directorio_galeria: 'abstract',
+    desc_galeria:'Simple and not so simple',
+    imagen_galeria: 'abstract.jpg'
   },
 ];
 
