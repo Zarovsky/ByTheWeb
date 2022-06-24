@@ -1,26 +1,25 @@
 <h1>Search image</h1>
 <mat-divider></mat-divider>
 <br>
-<!--
-<div fxLayout="column">
-  <mat-form-field appearance="fill">
-    <mat-label>Number</mat-label>
+<div fxLayout="row">
+  <mat-form-field fxFlex="30" fxFlex.md="50" fxFlex.xs="90" appearance="fill">
+    <mat-label>Search images</mat-label>
     <input
       type="text"
       placeholder="Pick one"
-      aria-label="Number"
+      aria-label="Search images"
       matInput
-      [(ngModel)]="termino"
+      [ngModel]="termino"
       [matAutocomplete]="auto"
     />
-    <mat-autocomplete autoActiveFirstOption
+    <mat-autocomplete
     #auto="matAutocomplete"
-    (optionSelected)="opcionSeleccionada($event)">
+    (optionSelected)="opcionSeleccionada(termino)">
       <mat-option
-        *ngFor="let item of galerias" [value]="item">
-        {{ item.titulo_galeria }}
+        *ngFor="let item of imagenes" [value]="item">
+        {{ item }}
       </mat-option>
-      <mat-option value="" *ngIf="galerias.length === 0 && termino.trim().length > 0">
+      <mat-option value="" *ngIf="imagenes.length === 0 && termino.trim().length > 0">
         No se encuentra nada con {{ termino }}
       </mat-option>
     </mat-autocomplete>
@@ -29,7 +28,13 @@
 
 </div>
 
--->
+<div>
+  
+</div>
+
+
+
+
 
 
 
