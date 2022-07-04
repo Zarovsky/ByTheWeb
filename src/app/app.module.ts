@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { ContactoModule } from './contacto/contacto.module';
@@ -19,7 +19,8 @@ import { ContactoModule } from './contacto/contacto.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    ContactoModule
+    ContactoModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

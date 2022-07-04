@@ -3,7 +3,7 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { ActivatedRoute } from '@angular/router';
 import { Imagen } from 'src/app/interfaces/imagen-interface';
 import { ModalService } from 'src/app/modal.services';
-import { galeria } from '../../../interfaces/galerias-inerfaces';
+import { Galeria } from '../../../interfaces/galerias-inerfaces';
 import { GaleriasService } from '../../services/galerias.service';
 
 @Component({
@@ -16,9 +16,9 @@ export class ListadoComponent implements OnInit {
   termino:string = '';
   abrirModal: boolean = false;
   imgDetalle!: Imagen;
-  galeriaActual: galeria;
+  galeriaActual!: Galeria;
   imagenes: Imagen[] = []; // las imágenes de la galeria
-  galerias: galeria[] = []; // son las galerias, como el menú
+  galerias: Galeria[] = []; // son las galerias, como el menú
 
   constructor(
     private route: ActivatedRoute,
@@ -26,14 +26,23 @@ export class ListadoComponent implements OnInit {
     private srv: GaleriasService
   ) {
     //this.route.params.subscribe(({ gallery }) => { this.getproducts(gallery); });
-    // recupero todas las galerías para que el usuario no deba ir al menú
-    this.galerias = this.srv.getGalerias(); // pillamos todas
+
+
     // recupero la galería actual pasada por parámetro
-    this.galeriaActual = this.srv.getgaleriaById(
-      this.route.snapshot.paramMap.get('id')!);
+    this.srv.getGaleriaById(
+      this.route.snapshot.paramMap.get('id')!).subscribe(galeria => {
+        this.galeriaActual = galeria;
+      });
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    // recupero todas las galerías para que el usuario no deba ir al menú
+    this.srv.getGalerias().subscribe(galerias => {
+
+      this.galerias = galerias;
+    });
+
+  }
 
   // si selecciona una galeria desde el autocomplete
   opcionSeleccionada(galeria: MatAutocompleteSelectedEvent) {

@@ -8,6 +8,8 @@ import { ListadoImagenComponent } from './pages/listado-imagen/listado-imagen.co
 import { ListadoGaleriaComponent } from './pages/listado-galeria/listado-galeria.component';
 import { GaleriaComponent } from './pages/galeria/galeria.component';
 import { ImagenComponent } from './pages/imagen/imagen.component';
+import { MaterialModule } from '../material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { ImagenComponent } from './pages/imagen/imagen.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { galeria } from '../../../interfaces/galerias-inerfaces';
-import { Router } from '@angular/router';
+import { Galeria } from '../../../interfaces/galerias-inerfaces';
 import { GaleriasService } from '../../services/galerias.service';
 
 @Component({
@@ -12,14 +11,14 @@ export class GaleriasComponent implements OnInit {
   // cargado : boolean = false;
   newLength: number = 6;
 
-  constructor(private router: Router, private srv: GaleriasService) {
-    // esto hay que convertirlo en un observable
-    this.menuGalerias = this.srv.getGalerias();
+  constructor( private srv: GaleriasService) { }
+
+  menuGalerias: Galeria[] = [];
+
+  ngOnInit(): void {
+    console.log('en el ini');
+  this.srv.getGalerias().subscribe(galerias => {this.menuGalerias = galerias});
   }
-
-  menuGalerias: galeria[] = [];
-
-  ngOnInit(): void {}
 
   showMore() {
     // this.cargado = false;

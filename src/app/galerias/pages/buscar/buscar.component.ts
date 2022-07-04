@@ -22,7 +22,7 @@ export class BuscarComponent implements OnInit {
     console.log(termino);
     if (!termino) {
       // mostrar un pop up sin cambiar el contenido actual
-      // this.heroeSeleccionado = undefined;
+      // this.galeriaSeleccionado = undefined;
       return;
     }
   }

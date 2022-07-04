@@ -1,1 +1,69 @@
-<p>agregar-galeria works!</p>
+<h1>Add new gallery</h1>
+<mat-divider></mat-divider>
+<div class="formulario">
+    <form autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="onSubmit()">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="40px">
+        <div fxFlex="50" fxLayout="column">
+          <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+            <mat-label>Title</mat-label>
+            <input
+              matInput
+              placeholder="Title of the gallery"
+              type="text"
+              required
+              formControlName="titulo"
+            />
+            <mat-error *ngIf="getCampoNoValido('titulo')">{{
+              getErrorCampoNoValido('titulo')
+            }}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+            <mat-label>Directory</mat-label>
+            <input
+              matInput
+              placeholder="Name directory in assets created"
+              type="text"
+              required
+              formControlName="directorio"
+            />
+            <mat-error *ngIf="getCampoNoValido('directorio')">{{
+              getErrorCampoNoValido('directorio')
+            }}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+            <mat-label>Upload image</mat-label>
+            <input
+              accept=".jpg,.png"
+              matInput
+              placeholder="Select image for gallery"
+              type="file"
+              required
+              formControlName="imagen"
+              (change)="onFileChange($event)"
+            />
+            <mat-error *ngIf="getCampoNoValido('imagen')">{{
+              getErrorCampoNoValido('imagen')
+            }}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+            <mat-label>Short description</mat-label>
+            <textarea matInput formControlName="descripcion" rows="10"></textarea>
+          </mat-form-field>
+
+          <br />
+          <div fxLayout>
+            <button mat-raised-button [disabled]="miFormulario.invalid" color="warn" type="submit">
+              <mat-icon>save</mat-icon>
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+

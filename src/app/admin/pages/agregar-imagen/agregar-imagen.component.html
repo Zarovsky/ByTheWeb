@@ -1,1 +1,59 @@
-<p>agregar-imagen works!</p>
+<h1>Add new gallery</h1>
+<mat-divider></mat-divider>
+<div class="formulario">
+    <form autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="onSubmit()">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="40px">
+        <div fxFlex="50" fxLayout="column">
+          <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              placeholder="Name of the image"
+              type="text"
+              required
+              formControlName="nombre"
+            />
+            <mat-error *ngIf="getCampoNoValido('nombre')">{{
+              getErrorCampoNoValido('nombre')
+            }}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+            <mat-label>Gallery</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let galeria of galerias" [value]="galeria.id_galeria">
+                {{ galeria.titulo_galeria }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+            <mat-label>Upload image</mat-label>
+            <input
+              matInput
+              placeholder="Select image to upload"
+              type="text"
+              required
+              formControlName="imagen"
+            />
+            <mat-error *ngIf="getCampoNoValido('imagen')">{{
+              getErrorCampoNoValido('imagen')
+            }}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="100" fxLayout.xs="column" appearance="fill">
+            <mat-label>Short description</mat-label>
+            <textarea matInput formControlName="descripcion" rows="10"></textarea>
+          </mat-form-field>
+
+          <br />
+          <div fxLayout>
+            <button mat-raised-button [disabled]="miFormulario.invalid" color="warn" type="submit">
+              <mat-icon>save</mat-icon>
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
