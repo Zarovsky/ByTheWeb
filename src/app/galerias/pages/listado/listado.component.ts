@@ -29,7 +29,7 @@ export class ListadoComponent implements OnInit {
 
 
     // recupero la galería actual pasada por parámetro
-    this.srv.getGaleriaById(
+    this.srv.getGaleriaByTitle(
       this.route.snapshot.paramMap.get('id')!).subscribe(galeria => {
         this.galeriaActual = galeria;
       });
