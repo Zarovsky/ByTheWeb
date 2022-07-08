@@ -7,7 +7,7 @@ import { Imagen } from '../../interfaces/imagen-interface';
 export class ImagenPipe implements PipeTransform {
 
   transform(imagen: Imagen): string {
-    return `assets/images/${imagen.galeria}/${imagen.imagen}`;
+    return `assets/${imagen.galeria_imagen}/${imagen.galeria_imagen}`;
   }
 
 }

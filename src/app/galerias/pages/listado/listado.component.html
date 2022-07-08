@@ -21,19 +21,19 @@
         {{ item.titulo_galeria }}
       </mat-option>
       <mat-option value="" *ngIf="galerias.length === 0 && termino.trim().length > 0">
-        No se encuentra nada con {{ termino }}
+        No se encuentra nada en {{ termino }}
       </mat-option>
     </mat-autocomplete>
 
   </mat-form-field>
 
 </div>
-<!--
-<div *ngIf="galeriaActual"
+
+<div *ngIf="galeriaActual && imagenes.length > 0; else Sindatos"
   fxLayout="row wrap"
   fxLayout.xs="column"
   fxLayoutAlign="center"
-  fxLayoutGap="10px" *ngIf="imagenes; else Sindatos">
+  fxLayoutGap="10px">
   <div fxFlex="20" fxFlex.sm="50" *ngFor="let item of imagenes">
     <app-tarjeta [imagen]="item"></app-tarjeta>
 
@@ -43,8 +43,8 @@
 <ng-template #Sindatos>
   <div>No hay nada que mostrar</div>
 </ng-template>
--->
-hola
+
+
 <!-- si se pulso el botón debe pasar esto a ser verdadero y que se muestre -->
 <div *ngIf="abrirModal == true">
   <app-img-modal [imagen]="imgDetalle"

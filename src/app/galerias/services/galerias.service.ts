@@ -16,32 +16,32 @@ export class GaleriasService {
 
   // Galerias
   getGalerias(): Observable<Galeria[]> {
-    console.log(this.baseUrl);
     return this.http.get<Galeria[]>(`${ this.baseUrl}/galerias`);
   }
 
   getGaleriaById(id:string):Observable<Galeria> {
-    return this.http.get<Galeria>(`${this.baseUrl}/galerias/?id_galeria=${id}`);
+    return this.http.get<Galeria>(`${this.baseUrl}/galerias?id_galeria=${id}`);
   }
 
-  getGaleriaByTitle(id:string):Observable<Galeria> {
-    return this.http.get<Galeria>(`${this.baseUrl}/galerias/?titulo_galeria=${id}`);
+  getGaleriaByDirectory(id:string):Observable<Galeria> {
+    console.log('en servicio');
+    console.log(`${this.baseUrl}/galerias/?directorio_galeria=${id}`);
+    return this.http.get<Galeria>(`${this.baseUrl}/galerias?directorio_galeria=${id}`);
   }
 
   // Imagenes
   getImagens(): Observable<Imagen[]> {
-    console.log(this.baseUrl);
     return this.http.get<Imagen[]>(`${ this.baseUrl}/imagenes`);
   }
 
-  getImagensByGallery(): Observable<Imagen[]> {
-    console.log(this.baseUrl);
-    return this.http.get<Imagen[]>(`${ this.baseUrl}/imagenes`);
+  // desde galeria coincide con directorio de imágenes
+  getImagensByDirectory(galeria: string): Observable<Imagen[]> {
+    console.log(galeria);
+    return this.http.get<Imagen[]>(`${ this.baseUrl}/imagenes/?directorio_imagen=${galeria}`);
   }
 
-  getImagensById(): Observable<Imagen[]> {
-    console.log(this.baseUrl);
-    return this.http.get<Imagen[]>(`${ this.baseUrl}/imagenes`);
+  getImagensById(id: string): Observable<Imagen[]> {
+    return this.http.get<Imagen[]>(`${ this.baseUrl}/imagenes?id_imagen=${id}`);
   }
 
 /*

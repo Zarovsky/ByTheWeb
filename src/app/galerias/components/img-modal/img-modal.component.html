@@ -3,21 +3,21 @@
   <img
     class="modal-content"
     id="img01"
-    [src]="imagen.imagen"
-    [alt]="imagen.nombre"
+    [src]="imagen.url_imagen"
+    [alt]="imagen.nombre_imagen"
   />
   <div class="caption">
-    <div><b>Nombre:</b> {{ imagen.nombre }}</div>
+    <div><b>Nombre:</b> {{ imagen.nombre_imagen }}</div>
     <div>
       {{
-        imagen.descripcion.length > 150
-          ? (imagen.descripcion | slice: 0:150) + "..."
-          : imagen.descripcion
+        imagen.descripcion_imagen.length > 150
+          ? (imagen.descripcion_imagen | slice: 0:150) + "..."
+          : imagen.descripcion_imagen
       }}
     </div>
 
-    <div *ngIf="imagen.megustan > 0" class="megustan">
-      Le ha gustado a <b> {{ imagen.megustan }} </b> personas
+    <div *ngIf="imagen.megustan_imagen > 0" class="megustan">
+      Le ha gustado a <b> {{ imagen.megustan_imagen }} </b> personas
     </div>
   </div>
 </div>

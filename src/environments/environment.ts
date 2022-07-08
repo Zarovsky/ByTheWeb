@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:3000/galerias'
+  baseUrl: 'http://localhost:3000'
 };
 
 /*
