@@ -24,7 +24,6 @@ export class GaleriasService {
   }
 
   getGaleriaByDirectory(id:string):Observable<Galeria> {
-    console.log('servicio ' + id);
     return this.http.get<Galeria>(`${this.baseUrl}/galerias?directorio_galeria=${id}`);
   }
 

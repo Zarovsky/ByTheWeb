@@ -7,6 +7,7 @@
         aria-label="Search gallery"
         matInput
         [(ngModel)]="termino"
+        (click)="termino = ''"
         [matAutocomplete]="auto"
       />
       <mat-autocomplete autoActiveFirstOption
@@ -16,11 +17,9 @@
           *ngFor="let item of galerias" [value]="item">
           {{ item.titulo_galeria }}
         </mat-option>
-        <mat-option value="" *ngIf="galerias.length === 0 && termino.trim().length > 0">
-          No se encuentra nada en {{ termino }}
-        </mat-option>
+
       </mat-autocomplete>
-  
+
     </mat-form-field>
-  
+
   </div>

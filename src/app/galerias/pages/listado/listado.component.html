@@ -13,7 +13,7 @@
   fxLayoutAlign="center"
   fxLayoutGap="10px">
   <div fxFlex="20" fxFlex.sm="50" *ngFor="let item of imagenes">
-    <app-tarjeta [imagen]="item"></app-tarjeta>
+    <app-tarjeta [imagen]="item" (onVerDetalle)="verDetalle($event)"></app-tarjeta>
 
   </div>
 </div>

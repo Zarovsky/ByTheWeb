@@ -11,3 +11,9 @@ mat-card {
 
 }
 
+img:hover {
+  cursor: pointer;
+}
+
+
+

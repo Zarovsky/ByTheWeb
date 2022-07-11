@@ -16,7 +16,7 @@ export class SelectGaleriaComponent {
 
   @Output() onCargarGaleria: EventEmitter<Galeria> = new EventEmitter();
 
-  constructor(private srv: GaleriasService) { 
+  constructor(private srv: GaleriasService) {
             // recupero todas las galerías para que el usuario no deba ir al menú
             this.srv.getGalerias().subscribe(galerias => {
               this.galerias = galerias;
@@ -26,7 +26,6 @@ export class SelectGaleriaComponent {
    // si selecciona una galeria desde el autocomplete
    opcionSeleccionada(galeria: MatAutocompleteSelectedEvent) {
 
-    console.log('selecciono: ' + galeria.option.value.directorio_galeria);
     if (!galeria.option.value) {
       // mostrar un pop up sin cambiar el contenido actual
       // this.heroeSeleccionado = undefined;
@@ -38,7 +37,7 @@ export class SelectGaleriaComponent {
     const index = this.galerias.findIndex(value => value.directorio_galeria === galeria.option.value.directorio_galeria);
     if (index != -1 ) {
       this.onCargarGaleria.emit(this.galerias[index]);
-      this.termino = this.galerias[index].titulo_galeria;     
+      this.termino = this.galerias[index].titulo_galeria;
     }
   }
 
