@@ -1,9 +1,9 @@
 h1 {
-  font-family: Roboto;
-  letter-spacing: 1.8em;
-  margin-inline-start: 20px;
-}
-
-mat-form-field {
-  margin-left: 15px;
-}
+    font-family: Roboto;
+    letter-spacing: 1.8em;
+    margin-inline-start: 20px;
+  }
+  
+  mat-form-field {
+    margin-left: 15px;
+  }

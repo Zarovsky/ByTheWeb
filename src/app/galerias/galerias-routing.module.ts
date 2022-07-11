@@ -1,3 +1,4 @@
+import { PruebaComponent } from './pages/prueba/prueba.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BuscarComponent } from './pages/buscar/buscar.component';
@@ -11,6 +12,7 @@ children: [
   { path: 'home' , component: GaleriasComponent},
   { path: ':id', component: ListadoComponent },
   { path: 'search', component: BuscarComponent },
+  { path: 'listar/prueba', component: PruebaComponent },
   { path: '**', redirectTo:'home'}
 ]}
 ];

@@ -16,7 +16,6 @@ export class GaleriasComponent implements OnInit {
   menuGalerias: Galeria[] = [];
 
   ngOnInit(): void {
-    console.log('en el ini');
   this.srv.getGalerias().subscribe(galerias => {this.menuGalerias = galerias});
   }
 

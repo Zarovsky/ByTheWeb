@@ -47,6 +47,12 @@ export class HeaderComponent implements OnInit {
         icono: 'mail'
       },
       {
+        usuario: 'all',
+        literal: 'Prueba',
+        enlace: '/galerias/listar/prueba',
+        icono: 'mail'
+      },
+      {
         usuario: 'admin',
         literal: 'Galeria +',
         enlace: '/galerias',

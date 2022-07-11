@@ -24,8 +24,7 @@ export class GaleriasService {
   }
 
   getGaleriaByDirectory(id:string):Observable<Galeria> {
-    console.log('en servicio');
-    console.log(`${this.baseUrl}/galerias/?directorio_galeria=${id}`);
+    console.log('servicio ' + id);
     return this.http.get<Galeria>(`${this.baseUrl}/galerias?directorio_galeria=${id}`);
   }
 
@@ -35,9 +34,8 @@ export class GaleriasService {
   }
 
   // desde galeria coincide con directorio de imágenes
-  getImagensByDirectory(galeria: string): Observable<Imagen[]> {
-    console.log(galeria);
-    return this.http.get<Imagen[]>(`${ this.baseUrl}/imagenes/?directorio_imagen=${galeria}`);
+  getImagensByGallery(galeria: string): Observable<Imagen[]> {
+    return this.http.get<Imagen[]>(`${ this.baseUrl}/imagenes?galeria_imagen=${galeria}`);
   }
 
   getImagensById(id: string): Observable<Imagen[]> {
