@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Galeria } from 'src/app/interfaces/galerias-inerfaces';
 import { Imagen } from 'src/app/interfaces/imagen-interface';
-import { ModalService } from 'src/app/modal.services';
 import { GaleriasService } from '../../services/galerias.service';
+import { ModalService } from 'src/app/modal.services';
 
 @Component({
   selector: 'app-listado',
@@ -12,27 +12,23 @@ import { GaleriasService } from '../../services/galerias.service';
 })
 export class ListadoComponent implements OnInit {
 
-  galeriaActual: Galeria | undefined;
+  galeriaActual!: Galeria;
   imagenes: Imagen[] = []; // las imágenes de la galeria
   abrirModal: boolean = false;
   imgDetalle!: Imagen;
 
   constructor(private activatedRoute: ActivatedRoute,
-    private srv: GaleriasService, private vtnModal: ModalService) {
-      this.srv.getGaleriaByDirectory(this.activatedRoute.snapshot.paramMap.get('id')!)
-      .subscribe(galeria => {
-        if (galeria) {
-            this.recargar(galeria);
-          }
-        });
-
-     }
+    // private vtnModal: ModalService,
+    private srv: GaleriasService,) { }
 
   ngOnInit(): void {
-    this.vtnModal.$modal.subscribe((valor) => {
-      this.abrirModal = valor;
-    });
-
+    this.srv.getGaleriaByDirectory(this.activatedRoute.snapshot.paramMap.get('id')?.trim()!)
+    .subscribe((galeria: Galeria) => {
+      if (galeria) {
+          this.galeriaActual = galeria;
+          this.getImagesGallery(this.galeriaActual.directorio_galeria);
+        } 
+      });
   }
 
     // si selecciona una galeria desde el autocomplete

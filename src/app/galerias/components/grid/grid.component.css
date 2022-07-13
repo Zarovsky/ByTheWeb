@@ -1,0 +1,188 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(250px, auto);
+    grid-gap:10px;
+    grid-auto-flow: dense;
+    margin: auto;
+}
+
+ul {
+    padding-inline-end:40px;
+    padding-bottom: 40px;
+}
+
+.container li {
+    list-style: none;
+}
+
+.gallery-item {
+    width:100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.gallery-item .image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius:1%;
+}
+
+.gallery-item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%; /* centramos la imagen */
+    cursor: pointer;
+    transition:.4s ease-in-out;
+}
+
+.gallery-item:hover .image img{
+    transform:scale(1.5);
+}
+
+.gallery-item .text .titulo {
+    font-size:1.5rem;
+    color:#fff;
+    background: radial-gradient(circle, rgba(33,150,243,0.8) 0%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    cursor:default;
+    width: 100%;
+    padding: 3px;
+    top:0;
+    opacity: 0;
+    transition: all 400ms ease-out;
+}
+
+.gallery-item .text .mensaje {
+    color: rgba(33, 150, 243, 0.8);
+    width: 100%;
+    height: 0px;
+    font-size: 0rem;
+    position: absolute;
+    top:40%;
+    font-weight: 500;
+    text-align: center;
+    transition: 0.6s ease-out;
+ }
+
+ .gallery-item .text .mensaje2 {
+    height: 100%;
+  font-size : 3rem;
+ }
+
+.gallery-item .text .corazon {
+color: #000;
+position: absolute;
+font-size: 1.1rem;
+cursor:default;
+background-color: rgba(33, 150, 243,0.5);
+border-radius: 50px;
+width: 75px;
+height: 30px;
+left: -10%;
+bottom: 10%;
+font-weight: 600;
+line-height: 20px;
+align-items: center;
+display: flex;
+opacity: 0;
+transition: all 400ms ease-out;
+}
+
+.gallery-item .text .corazon span {
+  color: rgb(245, 12, 12);
+  padding: 3px 5px;
+}
+
+.gallery-item .text .btnCarrito {
+   position: absolute;
+    right: -10%;
+    bottom: 9%;
+    background-color: rgba(33, 150, 243,0.5);
+    border-radius: 50px;
+    width:30px;
+    height: 30px;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 400ms ease-out;
+ }
+
+ .gallery-item .text .btnCarrito span {
+     color:#000;
+     font-size: 1.2rem;
+     padding: 5px;
+
+ }
+
+ .gallery-item:hover .text .titulo {
+     top: 15%;
+     opacity: 1;
+ }
+ .gallery-item:hover .text .btnCarrito {
+    right: 9%;
+    opacity: 1;
+ }
+ .gallery-item:hover .text .corazon {
+    left: 9%;
+    opacity: 1;
+ }
+
+ .gallery-item .text .btnCarrito:hover span{
+color: rgb(245, 12, 12);
+ }
+
+.w-1 {
+    grid-column: span 1;
+}
+.w-2 {
+    grid-column: span 2;
+}
+.w-3 {
+    grid-column: span 3;
+}
+.w-4 {
+    grid-column: span 4;
+}
+
+
+.h-1 {
+    grid-row: span 1;
+}
+.h-2 {
+    grid-row: span 2;
+}
+.h-3 {
+    grid-row: span 3;
+}
+.h-4 {
+    grid-row: span 4;
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .w-1,.w-2,.w-3,.w-4 {
+        grid-column:span 1;
+    }
+}
+
+
+@keyframes move-down {
+    0% {
+        top:10%;
+    }
+    50% {
+        top:35%;
+    }
+    100% {
+        top:50%;
+    }
+}
+
+

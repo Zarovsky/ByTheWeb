@@ -1,0 +1,16 @@
+<ul class="container">
+    <li *ngFor="let imagen of imagenes" class="gallery-container">
+        <div class="gallery-item">
+            <div class="image">
+                <img alt="{{imagen.nombre_imagen}}" src="{{imagen | imagen}}" (click)="verDetalle(imagen)">
+                <div class="text">
+                    <div class="titulo">{{imagen.nombre_imagen}}</div>
+                    <div #msj class="mensaje">Gracias</div>
+                    <div class="btnCarrito"><span #icono class="material-icons" (click)="addproduct(imagen, msj, icono)">{{esFavorito(imagen.id_imagen) ? 'favorite' : 'favorite_border'}}</span></div>
+
+                    <div class="corazon"><div><span class="material-icons">favorite</span></div><div>{{imagen.megustan_imagen}}</div></div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

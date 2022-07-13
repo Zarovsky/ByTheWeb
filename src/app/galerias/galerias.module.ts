@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { PruebaComponent } from './pages/prueba/prueba.component';
 import { SelectGaleriaComponent } from './components/select-galeria/select-galeria.component';
 import { ListadoComponent } from './pages/listado/listado.component';
+import { GridComponent } from './components/grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ListadoComponent } from './pages/listado/listado.component';
     GaleriasComponent,
     PruebaComponent,
     SelectGaleriaComponent,
-    ListadoComponent
+    ListadoComponent,
+    GridComponent
   ],
   imports: [
     CommonModule,
