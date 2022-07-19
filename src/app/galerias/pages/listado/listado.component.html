@@ -1,7 +1,7 @@
 
 <pre>{{ galeriaActual | json }} </pre>
 
-<h1>Gallery {{ galeriaActual.titulo_galeria }}</h1>
+<h1>Gallery {{ (galeriaActual ? galeriaActual.titulo_galeria : '')  }}</h1>
 
 <mat-divider></mat-divider>
 <br />
@@ -12,10 +12,11 @@
   fxLayout.xs="column"
   fxLayoutAlign="center"
   fxLayoutGap="10px">
-  <div fxFlex="20" fxFlex.sm="50" *ngFor="let item of imagenes">
-    <app-tarjeta [imagen]="item" (onVerDetalle)="verDetalle($event)"></app-tarjeta>
+   <!-- <div fxFlex="20" fxFlex.sm="50" *ngFor="let item of imagenes">
+    <app-tarjeta [imagen]="item" (onVerDetalle)="verDetalle($event)"></app-tarjeta> -->
+    <app-grid [imagenes]="imagenes" (onVerDetalle)="verDetalle($event)"></app-grid>
 
-  </div>
+  <!-- </div> -->
 </div>
 
 <ng-template #Sindatos>

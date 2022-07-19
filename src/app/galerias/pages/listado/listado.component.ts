@@ -25,7 +25,15 @@ export class ListadoComponent implements OnInit {
     this.srv.getGaleriaByDirectory(this.activatedRoute.snapshot.paramMap.get('id')?.trim()!)
     .subscribe((galeria: Galeria) => {
       if (galeria) {
+        // console.log(Array.isArray(galeria));
+        if (Array.isArray(galeria))
+        {
+          galeria.forEach(item => this.galeriaActual = item);
+        } 
+        else 
+        {
           this.galeriaActual = galeria;
+        }
           this.getImagesGallery(this.galeriaActual.directorio_galeria);
         } 
       });
