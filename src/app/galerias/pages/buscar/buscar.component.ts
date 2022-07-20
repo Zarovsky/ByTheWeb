@@ -1,3 +1,4 @@
+import { GaleriasService } from './../../services/galerias.service';
 import { Component, OnInit } from '@angular/core';
 import { Imagen } from 'src/app/interfaces/imagen-interface';
 
@@ -12,7 +13,7 @@ export class BuscarComponent implements OnInit {
   termino: string = '';
   imagenes: Imagen[] = []; // las imágenes de la galeria
 
-  constructor() { }
+  constructor(private srv: GaleriasService) { }
 
   ngOnInit(): void {
   }

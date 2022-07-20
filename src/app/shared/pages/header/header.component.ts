@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
       {
         usuario: 'all',
         literal: 'Search',
-        enlace: '/galerias/search',
+        enlace: '/galerias/search/image',
         icono: 'search'
       },
       {

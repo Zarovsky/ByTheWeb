@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { ModalService } from 'src/app/modal.services';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Imagen } from '../../../interfaces/imagen-interface';
 
 @Component({
@@ -10,11 +9,13 @@ import { Imagen } from '../../../interfaces/imagen-interface';
 export class ImgModalComponent  {
 
   @Input() imagen!: Imagen;
-  constructor(private vntModal: ModalService) { }
+  @Output()  onCerrar: EventEmitter<boolean> = new EventEmitter();
+
+  constructor() { }
 
   cerrarModal()
   {
-    this.vntModal.$modal.emit(false);
+     this.onCerrar.emit(false);
   }
 
 }

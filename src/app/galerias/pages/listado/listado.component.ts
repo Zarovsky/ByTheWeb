@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Galeria } from 'src/app/interfaces/galerias-inerfaces';
 import { Imagen } from 'src/app/interfaces/imagen-interface';
 import { GaleriasService } from '../../services/galerias.service';
-import { ModalService } from 'src/app/modal.services';
 
 @Component({
   selector: 'app-listado',
@@ -50,6 +49,10 @@ export class ListadoComponent implements OnInit {
   verDetalle(imagen: any) {
     this.imgDetalle = imagen;
     this.abrirModal = true;
+  }
+
+  cerrarModal() {
+    this.abrirModal = false;
   }
 
   // cargamos las imágenes de la galería

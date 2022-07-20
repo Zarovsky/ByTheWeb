@@ -11,7 +11,7 @@ const routes: Routes = [
 children: [
   { path: 'home' , component: GaleriasComponent},
   { path: ':id', component: ListadoComponent },
-  { path: 'search', component: BuscarComponent },
+  { path: 'search/image', component: BuscarComponent },
   { path: 'listar/prueba', component: PruebaComponent },
   { path: '**', redirectTo:'home'}
 ]}

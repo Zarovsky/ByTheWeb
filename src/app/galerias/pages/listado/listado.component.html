@@ -1,6 +1,4 @@
 
-<pre>{{ galeriaActual | json }} </pre>
-
 <h1>Gallery {{ (galeriaActual ? galeriaActual.titulo_galeria : '')  }}</h1>
 
 <mat-divider></mat-divider>
@@ -28,6 +26,7 @@
 <div *ngIf="abrirModal == true">
   <app-img-modal [imagen]="imgDetalle"
   (onVerDetalle)="verDetalle( $event )"
+  (onCerrar)="cerrarModal()"
   ></app-img-modal>
 </div>
 
